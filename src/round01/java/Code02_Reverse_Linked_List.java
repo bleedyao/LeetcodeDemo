@@ -1,4 +1,4 @@
-package round01;
+package round01.java;
 
 
 /**
@@ -33,14 +33,14 @@ public class Code02_Reverse_Linked_List {
 
         @Override
         public String toString() {
-            String temp = "[" + val;
+            StringBuilder temp = new StringBuilder("[" + val);
             ListNode tempNode = next;
             while (tempNode != null) {
-                temp += ", " + tempNode.val;
+                temp.append(", ").append(tempNode.val);
                 tempNode = tempNode.next;
             }
-            temp += "]";
-            return temp;
+            temp.append("]");
+            return temp.toString();
         }
     }
 

@@ -1,10 +1,9 @@
-package round01;
+package round01.java;
 
-import java.util.List;
 
 public class Code03_Swap_Nodes_In_Pairs {
     public ListNode swapPairs(ListNode head) {
-        ListNode dummy = new ListNode(Integer.MIN_VALUE);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode point = dummy;
         while (point.next != null && point.next.next != null) {
@@ -29,14 +28,14 @@ public class Code03_Swap_Nodes_In_Pairs {
 
         @Override
         public String toString() {
-            String temp = "[" + val;
+            StringBuilder temp = new StringBuilder("[" + val);
             ListNode tempNode = next;
             while (tempNode != null) {
-                temp += ", " + tempNode.val;
+                temp.append(", ").append(tempNode.val);
                 tempNode = tempNode.next;
             }
-            temp += "]";
-            return temp;
+            temp.append("]");
+            return temp.toString();
         }
     }
 
